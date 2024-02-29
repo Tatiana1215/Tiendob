@@ -189,7 +189,7 @@ function pintar() {
     // Botón de agregar
     let boton = document.createElement("button");
     boton.setAttribute("id", "agregar");
-    boton.textContent = "Agregar al carrito";
+    boton.textContent = "Agregar";
     boton.addEventListener("click", () => {
       agregarAlCarrito(i);
 
@@ -199,45 +199,10 @@ function pintar() {
     document.getElementById("contenedor").appendChild(div);
   });
 
-  // productoscarteras.forEach((item, car) => {
-  //   let div = document.createElement("div")
-  //   div.setAttribute("id", "card")
-
-  //   let imagen = document.createElement("div")
-  //   imagen.setAttribute("id", "imagen")
-  //   let img = document.createElement("img")
-  //   img.src = item.imagen
-  //   imagen.appendChild(img)
-  //   div.appendChild(imagen)
-
-  //   let titulo = document.createElement("div")
-  //   titulo.setAttribute("class", "titulo")
-  //   titulo.textContent = item.nombre
-  //   div.appendChild(titulo)
-
-  //   let precio = document.createElement("div")
-  //   precio.setAttribute("class", "precio")
-  //   precio.textContent = item.precio
-  //   div.appendChild(precio)
-
-  //   let boton = document.createElement("button");
-  //   boton.setAttribute("id", "agregar");
-  //   boton.textContent = "Agregar al carrito";
-  //   boton.addEventListener("click", () => {
-  //     agregarAlCarrito(i);
-
-  //   });
-  //   div.appendChild(boton)
-  //   document.getElementById("contenedorcarteras").appendChild(div)
-
-
-  // })
-
-
 }
 
 let carritoinf = [];
-function agregarAlCarrito(i, car) {
+function agregarAlCarrito(i) {
   // carritoinf.push(productos[i])
   let productoExistente = carritoinf.find(producto => producto.nombre === productos[i].nombre);
   if (productoExistente) {
@@ -330,6 +295,6 @@ contenedorIcono.addEventListener("click", () => {
     carritotabla.style.display = "none";
   }
 });
-  contenedorIcono.appendChild(tablaini);
+  contenedorIcono.appendChild(tableini);
 
 }
